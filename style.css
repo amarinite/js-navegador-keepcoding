@@ -1,0 +1,155 @@
+:root {
+  --verde-ingreso: rgb(3, 158, 3);
+  --rojo-gasto: rgb(204, 4, 4);
+  --sombra: rgb(211, 211, 211);
+  --bordes: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(241, 239, 236);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica, sans-serif;
+  color: rgb(39, 38, 38);
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  max-width: 500px;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0px 2px 5px var(--sombra);
+}
+
+h1 {
+  margin-bottom: 3rem;
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  margin-top: 0.5rem;
+}
+
+.tu-ahorro {
+  margin-bottom: 1.5rem;
+  font-size: 17px;
+}
+
+.tu-ahorro p:nth-child(2) {
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.total-ingresos-gastos {
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px var(--sombra);
+  flex: 1 1;
+  margin-bottom: 3rem;
+}
+
+.total-ingresos-gastos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.gastos {
+  border-left: 1px solid rgb(179, 179, 179);
+}
+
+.ingresos p:nth-child(2) {
+  margin-top: 5px;
+  color: var(--verde-ingreso);
+}
+
+.gastos p:nth-child(2) {
+  margin-top: 5px;
+  color: var(--rojo-gasto);
+}
+
+.movimientos {
+  margin-bottom: 2.5rem;
+}
+
+.movimiento {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px var(--sombra);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.movimiento.ingreso {
+  border-right: 7px solid var(--verde-ingreso);
+}
+
+.movimiento.gasto {
+  border-right: 7px solid var(--rojo-gasto);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(179, 179, 179);
+}
+
+/* ELIMINAR FLECHAS INPUT NUMBER */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#enviar {
+  margin-top: 0.5rem;
+  padding: 0.7rem 0;
+  font-size: 15px;
+  font-weight: 700;
+  border-style: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(163, 145, 222);
+}
